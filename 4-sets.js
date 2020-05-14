@@ -18,3 +18,10 @@ const cities1 = new Set(['Beijing', 'Kyiv']);
 const cities2 = new Set(['Kyiv', 'London', 'Baghdad']);
 
 const operations = [union, intersection, difference, complement];
+
+const results = operations.map(operation => ({
+    [operation.name]: operation(cities1, cities2)
+}));
+
+console.dir({ cities1, cities2 });
+console.dir(results);
